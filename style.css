@@ -1,86 +1,111 @@
-html {
-   height: 100%;
- }
-/* * {
-   box-sizing: border-box;
- }
-  */
- body {
+/* Set the font size and line height */
+body {
    display: flex;
-   font-family: Arial;
-   font-size: 20px;
-   margin: 0;
+   flex-direction: column;
+   line-height: 1.5;
+   font-size: 16px;
  }
  
  header {
-   padding: 30px;
-   text-align: center;
-   background-color:darkred;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1%;
+   background-color: #13293d;
    color: #fff;
  }
  
- nav {
-   display: flex;
-   background-color: yellow;
+ /* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+ h1 {
+   margin: 2%;
+   font-size: 200%;
+   font-family: serif;
  }
  
- /* nav p {
-   padding: 14px 20px;
+ /* Change header size to 180%, give it a 3% margin on top and bottom, and assign font family to serif */
+ h2 {
+   margin: 3% 0;
+   font-size: 180%;
+   font-family: serif;
+ }
+ 
+ /* Change header size to 150% and assign font family to serif */
+ h3 {
+   font-size: 150%;
+   font-family: serif;
+ }
+ 
+ nav ul {
+   display: flex;
+   justify-content: space-between;
+   min-width: 300px;
+ }
+ 
+ nav a {
+   color: #b9C6ae;
+   font-weight: bold;
    text-decoration: none;
  }
  
  main {
    display: flex;
- }
- 
- aside {
-   flex: 30%;
-   background-color: #b9c6ae;
-   padding: 20px;
-   flex-wrap: wrap;
+   flex: 1 1 0;
+   max-width: 1200px;
+   margin: 2% auto;
  }
  
  section {
-   flex: 70%;
-   background-color: #fff;
-   padding: 20px;
+   flex: 1 1 0;
+   padding-right: 5%;
+ }
+ 
+ article {
+   border-bottom: 1px solid #d8a47f;
+ }
+ 
+ /* Add a margin to the top and bottom of the paragraphs */
+ article p {
+   margin: 2% 0;
+ }
+ 
+ /* Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
+ article ul {
+   margin-left: 5%;
+   list-style: square;
+   font-family: monospace;
+ }
+ 
+ aside {
+   width: 25%;
+ }
+ 
+ input,
+ button {
+   width: 100%;
+   margin: 2% 0;
+   padding: 1%;
  }
  
  footer {
-   padding: 20px;
-   text-align: center;
-   background: #13293d;
+   display: flex;
+   justify-content: center;
+   padding: 2%;
+   background-color: #13293d;
    color: #fff;
  }
  
- /* Image Placeholders */
- /* .sample-img {
-   background-color: #fff;
-   width: 100%;
-   padding: 20px;
-   height: 200px;
-   border: 1px solid black;
- } */
- 
- /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
- 
- /* Tablets - header changes color */
- /* @media screen and (max-width: 992px) {
-   header {
-     background: #772014;
+ @media screen and (max-width: 768px) {
+   header, main {
+     flex-direction: column;
    }
- } */
  
- /* Large smartphones - navbar changes color */
- /* @media screen and (max-width: 768px) {
-   nav {
-     background-color: #bb8588;
+   section {
+     padding-right: 0;
    }
- } */
  
- /* Small smartphones - image placeholders change color */
- /* @media screen and (max-width: 576px) {
-   .sample-img {
-     background-color: #8ac4ff;
+   aside {
+     width: 100%;
+     text-align: center;
    }
- } */
+ }
+ 
